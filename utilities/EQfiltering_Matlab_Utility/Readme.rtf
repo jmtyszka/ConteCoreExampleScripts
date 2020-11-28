@@ -1,0 +1,16 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue193;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs26 \cf2 This is a small utility function that will load the EQ Filtering filters into Matlab so that you can use them within Matlab to process stimuli as you wish.\'a0 The zip file contains this code together with two demo filter files.\'a0 Please note that this code is Matlab P-Code.\'a0 You will need the file load_filter.p in your Matlab path in order to use the function.\'a0 The load_filter.m file basically exists as a 'help' file for the utility that gives the call structure.\
+\
+To use this code. you would type:\
+\
+[h,Fs] = load_filter('filename.bin'), where 'filename.bin' is the name of the file that contains the filter to load.\'a0 These files should be are customized for your particular \cb3 S14\cb1  hardware and have been provided on the CD with the EQ Fitlering software.\'a0 The function returns the filter impulse response and the sampling rate of the impulse response.\'a0 You can then use this impulse response as you would use any impulse response in Matlab (with appropriate re-sampling to equalize the sampling rate, of course).\'a0 NOTE: there are separate impulse responses to equalize the left and right outputs of the \cb3 S14\cb1  hardware.\'a0 So, any Matlab code would need to load the left and right impulse responses (using two calls to the load_filter function).\'a0 You would then process all left-ear/right-ear outputs with corresponding impulse response prior to sending the stereo stimulus to the sound card.\
+\
+The load_filter function may also be used to create 'raw' digital filters as you have requested.\'a0 Simply load the filter into Matlab using load_filter and then save the file in WAV format using the Matlab function 'wavwrite'.\
+\
+\'a92012 - Sensimetrics Corporation}
